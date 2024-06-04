@@ -1,0 +1,50 @@
+{
+  "-NzVY_bcubmE4c6_7WsH": {
+    "definition": "A named container for storing data values",
+    "firebaseKey": "-NzVY_bcubmE4c6_7WsH",
+    "language_id": "-NzK8Xvc59Vslq6tP8eZ",
+    "time_submitted": 1717459376,
+    "title": "Variable",
+    "uid": ""
+  },
+  "-NzVZ7YWF0jEWs1Jo7iR": {
+    "definition": "A sequence of characters enclosed in single or double quotes",
+    "firebaseKey": "-NzVZ7YWF0jEWs1Jo7iR",
+    "language_id": "-NzK8Xvc59Vslq6tP8eZ",
+    "time_submitted": 1717459519,
+    "title": "String",
+    "uid": ""
+  },
+  "-NzVZbdPdjaxkufpY0rA": {
+    "definition": "Defines HTML headings",
+    "firebaseKey": "-NzVZbdPdjaxkufpY0rA",
+    "language_id": "-NzVR6RfsLUxMaP-mwiD",
+    "time_submitted": 1717459647,
+    "title": "<h1> to <h6>",
+    "uid": ""
+  },
+  "-NzVZq9uc29BTrOFD57R": {
+    "definition": "Defines a hyperlink",
+    "firebaseKey": "-NzVZq9uc29BTrOFD57R",
+    "language_id": "-NzVR6RfsLUxMaP-mwiD",
+    "time_submitted": 1717459706,
+    "title": "<a>",
+    "uid": ""
+  },
+  "-NzV_HxAHkOY0D13CA_L": {
+    "definition": "Specifies whether the flexible items should wrap or not",
+    "firebaseKey": "-NzV_HxAHkOY0D13CA_L",
+    "language_id": "-NzVRRG3TGOdWyFQCUzA",
+    "time_submitted": 1717459824,
+    "title": "flex-wrap",
+    "uid": ""
+  },
+  "-NzV_RBdciiUtyOaf-Vl": {
+    "definition": "Specifies the alignment between the items inside a flexible container when the items do not use all available space",
+    "firebaseKey": "-NzV_RBdciiUtyOaf-Vl",
+    "language_id": "-NzVRRG3TGOdWyFQCUzA",
+    "time_submitted": 1717459862,
+    "title": "justify-content",
+    "uid": ""
+  }
+}
