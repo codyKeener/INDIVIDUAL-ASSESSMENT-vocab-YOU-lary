@@ -1,6 +1,5 @@
-const clearDom = (divId) => {
-  const selectedDiv = divId;
-  selectedDiv.innerHTML = '';
+const clearDom = () => {
+  document.querySelector('#vocab-cards-container').innerHTML = '';
 };
 
 export default clearDom;
