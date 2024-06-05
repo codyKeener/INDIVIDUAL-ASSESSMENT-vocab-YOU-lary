@@ -34,7 +34,20 @@ const deleteVocabCard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// CREATE BOOK
+// GET SINGLE VOCAB CARD
+const getSingleVocabCard = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+// CREATE VOCAB CARD
 const createVocabCard = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocab.json`, {
     method: 'POST',
@@ -76,5 +89,5 @@ const filterVocabCardsByLanguage = (firebaseKey) => new Promise((resolve, reject
 });
 
 export {
-  getVocabCards, deleteVocabCard, createVocabCard, updateVocabCard, filterVocabCardsByLanguage
+  getVocabCards, deleteVocabCard, createVocabCard, updateVocabCard, filterVocabCardsByLanguage, getSingleVocabCard
 };
