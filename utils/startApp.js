@@ -4,9 +4,11 @@ import logoutButton from '../components/buttons/logoutButton';
 import { getVocabCards } from '../api/vocabData';
 import { showVocabCards } from '../pages/vocab';
 import domEvents from '../events/domEvents';
+import filterButtons from '../components/buttons/filterButtons';
 
 const startApp = (user) => {
   domBuilder();
+  filterButtons(user);
   domEvents(user);
   navBar();
   logoutButton();

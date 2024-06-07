@@ -24,6 +24,19 @@ body {
   width: 100%;
 }
 
+#filter-button-container {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+
+.filter-btn {
+  padding: 5px 15px 5px 15px;
+  background-color: deeppink;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #vocab-cards-container {
   display: flex;
   flex-wrap: wrap;

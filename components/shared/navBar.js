@@ -5,7 +5,7 @@ const navBar = () => {
   <nav class="navbar bg-body-tertiary">
   <div class="navbar-left">
     <a class="navbar-brand" href="#">
-      <img src="INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/public/images/vocab-you-lary-logo.png" width="160" height="34">
+      <img id="vocab-you-lary-logo" src="../../images/vocab-you-lary-logo.png" width="160" height="34">
     </a>
     <a>Create Entry</a>
   </div>
