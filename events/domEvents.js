@@ -1,4 +1,6 @@
-import { deleteVocabCard, getSingleVocabCard, getVocabCards } from '../api/vocabData';
+import {
+  deleteVocabCard, filterVocabCardsByLanguage, getSingleVocabCard, getVocabCards
+} from '../api/vocabData';
 import { showVocabCards } from '../pages/vocab';
 import addVocabForm from '../components/forms/addVocabForm';
 
@@ -20,6 +22,17 @@ const domEvents = (user) => {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleVocabCard(firebaseKey).then((vocabObject) => addVocabForm(vocabObject));
       getSingleVocabCard(firebaseKey).then(addVocabForm);
+    }
+
+    // CLICK EVENT FOR FILTERING VOCAB CARDS
+    if (e.target.id.includes('filter-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      filterVocabCardsByLanguage(firebaseKey).then((filterVocab) => showVocabCards(filterVocab));
+    }
+
+    // CLICK EVENT FOR SHOWING ALL CARDS
+    if (e.target.id.includes('all-cards-btn')) {
+      getVocabCards(user).then((vocab) => showVocabCards(vocab));
     }
   });
 };

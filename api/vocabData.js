@@ -77,7 +77,7 @@ const updateVocabCard = (payload) => new Promise((resolve, reject) => {
 
 // FILTER VOCAB CARDS BY LANGUAGE
 const filterVocabCardsByLanguage = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocab.json?orderBy="language_id"&equalTo="${firebaseKey}`, {
+  fetch(`${endpoint}/vocab.json?orderBy="language_id"&equalTo="${firebaseKey}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
