@@ -1,6 +1,6 @@
 import { showVocabCards } from '../pages/vocab';
 import { createVocabCard, getVocabCards, updateVocabCard } from '../api/vocabData';
-import { getSingleLanguage } from '../api/languageData';
+import { createLanguage, getSingleLanguage, updateLanguage } from '../api/languageData';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -44,6 +44,22 @@ const formEvents = (user) => {
             getVocabCards(user).then(showVocabCards);
           });
         });
+    }
+
+    // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A LANGUAGE
+    if (e.target.id.includes('submit-language')) {
+      const payload = {
+        name: document.querySelector('#language-tech').value,
+        time_submitted: Date.now(),
+        uid: user.uid
+      };
+      // this patches the payload object with a firebaseKey
+      createLanguage(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        updateLanguage(patchPayload).then(() => {
+          getVocabCards(user).then(showVocabCards);
+        });
+      });
     }
   });
 };

@@ -8,7 +8,8 @@ const navBar = () => {
     <a id="navbar-brand">
       <img id="vocab-you-lary-logo" width="160" height="34">
     </a>
-    <a id="create-entry">Create Entry</a>
+    <a class="navbar-buttons" id="create-entry">Create Entry</a>
+    <a class="navbar-buttons" id="create-language">Add Language/Tech</a>
   </div>
   <div id="logout-button"></div>
 </nav>
