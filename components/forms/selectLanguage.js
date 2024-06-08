@@ -2,7 +2,7 @@ import { getLanguages } from '../../api/languageData';
 import renderToDom from '../../utils/renderToDom';
 
 const selectLanguage = (user, vocabObj) => {
-  let domString = `<label for="language">Select a Language</label>
+  let domString = `<label for="language" class="form-text form-label">Select a Language</label>
     <select class="form-control" id="language_id" required>
     <option value="">Select a Language</option>`;
 
