@@ -4,6 +4,7 @@ import renderToDom from '../../utils/renderToDom';
 // USING THIS FORM FOR BOTH CREATE AND UPDATE
 const addLanguageForm = () => {
   clearDom();
+
   const domString = `
     <form id="submit-language" class="mb-4">
       <div class="mb-3 form-group">

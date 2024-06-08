@@ -1,6 +1,8 @@
 import { showVocabCards } from '../pages/vocab';
 import { createVocabCard, getVocabCards, updateVocabCard } from '../api/vocabData';
 import { createLanguage, getSingleLanguage, updateLanguage } from '../api/languageData';
+import domBuilder from '../components/shared/domBuilder';
+import filterButtons from '../components/buttons/filterButtons';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -57,7 +59,11 @@ const formEvents = (user) => {
       createLanguage(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateLanguage(patchPayload).then(() => {
+          if (document.querySelector('#search-and-filter-container').innerHTML === '') {
+            domBuilder(user);
+          }
           getVocabCards(user).then(showVocabCards);
+          filterButtons(user);
         });
       });
     }
