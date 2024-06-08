@@ -5,6 +5,7 @@ import selectLanguage from './selectLanguage';
 // USING THIS FORM FOR BOTH CREATE AND UPDATE
 const addVocabForm = (user, obj = {}) => {
   clearDom();
+
   const domString = `
     <form id="${obj.firebaseKey ? `update-vocab-card--${obj.firebaseKey}` : 'submit-vocab-card'}" class="mb-4">
       <div class="mb-3 form-group">
