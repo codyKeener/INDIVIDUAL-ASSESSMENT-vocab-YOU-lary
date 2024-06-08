@@ -20,8 +20,8 @@ const domEvents = (user) => {
     // CLICK EVENT FOR EDITING/UPDATING A VOCAB CARD
     if (e.target.id.includes('edit-vocab')) {
       const [, firebaseKey] = e.target.id.split('--');
-      getSingleVocabCard(firebaseKey).then((vocabObject) => addVocabForm(vocabObject));
-      getSingleVocabCard(firebaseKey).then(addVocabForm);
+      getSingleVocabCard(firebaseKey).then((vocabObject) => addVocabForm(user, vocabObject));
+      getSingleVocabCard(firebaseKey).then(addVocabForm(user));
     }
 
     // CLICK EVENT FOR FILTERING VOCAB CARDS
