@@ -10,7 +10,6 @@ const filterButtons = (user) => {
       domString += `
       <button class="filter-btn" id="filter-btn--${language.firebaseKey}">${language.name}</button>
       `;
-      console.warn('language.id', language.firebaseKey);
     });
     renderToDom('#filter-button-container', domString);
   });
