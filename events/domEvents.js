@@ -3,6 +3,7 @@ import {
 } from '../api/vocabData';
 import { showVocabCards } from '../pages/vocab';
 import addVocabForm from '../components/forms/addVocabForm';
+import search from '../components/forms/search';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -34,20 +35,11 @@ const domEvents = (user) => {
     if (e.target.id.includes('all-cards-btn')) {
       getVocabCards(user).then((vocab) => showVocabCards(vocab));
     }
+  });
 
-    // Need to move this to its own file - also need to fix some runtime errors and make it show all cards when empty - would also like it to search automatically without the button
-    const search = () => {
-      const userInput = e.target.value.toLowerCase();
-      getVocabCards(user).then((array) => {
-        const filteredArray = array.filter((item) => item.title.toLowerCase().includes(userInput));
-        showVocabCards(filteredArray);
-      });
-    };
-
-    // SEARCH EVENT
-    if (e.target.id.includes('search')) {
-      search(e);
-    }
+  // TYPE (KEYUP) EVENT FOR TYPING IN THE SEARCH BAR
+  document.querySelector('#search-bar-container').addEventListener('keyup', (e) => {
+    search(e, user);
   });
 };
 
